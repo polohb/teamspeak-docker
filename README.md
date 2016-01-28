@@ -1,6 +1,6 @@
 # TeamSpeak & Docker
 
-These instructions assume you have already installed Docker.
+These instructions assume you have already installed Docker and docker-compose.
 
 ## Running TeamSpeak in Docker
 
@@ -30,30 +30,12 @@ git clone https://github.com/polohb/teamspeak-docker.git
 ### Build your Docker container
 ```
 cd teamspeak-docker
-make build
+docker-compose build
 ```
 
 ### Run your TeamSpeak container and setup localhost port-forwarding
 ```
-make run
+docker-compose start -d
 ```
 
 
-## More stuff you can do
-
-#### Manually start the container
-```
-make start
-```
-
-
-#### Stop the container
-```
-make stop
-```
-
-
-#### Show output logs
-```
-make log
-```
